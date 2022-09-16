@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body { 
+    background:linear-gradient(rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 0.5)),url('./assets/home-img.jpeg');
+    /* -webkit-background-size: cover;
+     -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; */
+}
+
+/* Home */
+
+.container {
+    background-color: #F8F0E3;
+    width: 50%;
+    margin: 3% 25%;
+    border: 1px solid #b3b5b5;
+    box-shadow: 0px 2px 5px rgba(0,0,0,.5);
+}
+
+.home-nav, .footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 5% 10% 1% 10%;
+}
+
+.home-heading {
+    font-size: 2.5rem;
+    font-family: cursive;
+}
+
+.btn-add-img {
+    height:50px;
+    width:50px; 
+    overflow: hidden;
+    border: none;
+    /* background: none; */
+}
+
+.btn-add-img:hover {
+    border: 1px solid;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 15px;
+    text-shadow: 1px 1px 2px #427388; 
+}
+
+.add-icon-img {
+    height:50px;
+    width:50px; 
+    object-fit: cover;
+}
+
+.line{
+    border: 1px solid #b8e6b3;
+    border-radius: 5px;
+}
+
+.journal-list {
+    list-style-position: inside;
+    padding: 0 10%;
+}
+
+.journal-list-item {
+    font-size: 1.5rem;
+    padding: 3% 0;
+}
+
+.journal-list-link {
+    text-decoration: none;
+    color: black;
+}
+
+.journal-list-link:hover {
+    color: #b8e6b3;
+}
+
+/* Journals */
+
+.add-entry-form {
+    text-align: center;
+    width: 50%;
+    margin: 10% 25%;
+}
+
+.segment{
+    font-size: 1.5em;
+    margin: 0 0 10%;
+    padding: 0;
+}
+
+.title-box, .description-box, .date-box, .btn-submit {
+    display: block;
+    width: 100%;
+    /* padding: 0; */
+    border: none;
+    outline: none;
+    margin-bottom: 5%;
+}
+
+.title-box::placeholder , .description-box::placeholder , .date-box::placeholder {
+    color: gray;
+}
+  
+.title-box, .description-box, .date-box {
+    background: #F8F0E3;
+    padding: 5%;
+    padding-left: 5%;
+    height: 25%;
+    font-size: 0.9rem;
+    border-radius: 50px;
+    box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+}
+
+.description-box {
+    height: 150px;
+}
+  
+.btn-submit {
+    color: black;
+    margin-top: 10%;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 900;
+    box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white;
+    transition: 0.5s;
+}
+  
+.btn-submit:hover {
+    box-shadow: none;
+}
+
+/* MODAL */
+
+.modal-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+}
+
+.modal-dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); 
+    text-align: center;
+    background-color: rgb(195, 193, 193);
+    padding: 10%;
+    z-index: 1000;
+}
+
+.modal-heading {
+    color: black;
+    font-size: 3em;
+    text-align: center;
+}
+
+.btn-close{
+    padding: 5% 5%;
+    border: 1px solid gray;
+    border-radius: 20px;
+    /* width: 100%; */
+}
+
+.btn-close:hover{
+    border: 1px solid white;
+    color:black;
+    background-color: #33DDFF;
+}
+
+.description-display {
+    font-size: 1.5em;
+    padding: 0 10% 0% 10%;
+    text-align: justify;
+}
+
+.footer {
+    padding-bottom: 5%;
+}
+
+.btn-delete, .btn-goback{
+    display: inline-block;
+    background: #ececec;
+    border: 1px solid black;
+    padding: .5em 2em;
+    color: black;
+    margin-right: .5em;
+    box-shadow: inset 0px 1px 0px fadeout(white, 80%);
+    font-size: 1.2em;
+    border-radius: 20px;
+}
+
+.btn-delete:hover, .btn-goback:hover {
+    background-color: #b8e6b3;
+    box-shadow: none;
+}
+
+
+/* Media Queries */
+@media only screen and (max-width: 768px) {
+    /* .home-nav {
+        flex-direction: column;
+    } */
+    .container {
+        width: 80%;
+        margin: 3% 10%;
+    }
+    .home-heading {
+        font-size: 1.5rem;
+    }
+    .btn-add-img {
+        height:20px;
+        width:20px;
+        margin-top: 10px; 
+    }
+    .add-icon-img {
+        height:20px;
+        width:20px; 
+    }
+    .add-entry-form {
+        width: 80%;
+        margin: 5% 5%;
+    }
+    .journal-list-item {
+        font-size: 1rem;
+        padding: 3% 0;
+    }
+    .segment{
+        font-size: 1rem;
+    }
+    .description-display {
+        font-size: 1rem;
+        padding: 2% 5%;
+    }
+
+    .btn-delete, .btn-goback{
+        padding: .5rem 1rem;
+        font-size: 1rem;
+}
+}
+
+@media only screen and (max-width: 1200px) {
+    .container {
+        width: 60%;
+        margin: 3% 10%;
+    }
+}
